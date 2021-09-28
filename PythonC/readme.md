@@ -9,3 +9,8 @@ Test - ctypes:
 2. Run `make` to compile `spam.c` to `spam.so`.
 3. Run `python test.py`.
 
+Test - pymodules:
+===
+1. Enter the folder `cpymodule_test`.
+1. Run `make`.
+
