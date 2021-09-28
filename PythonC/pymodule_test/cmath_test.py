@@ -1,8 +1,10 @@
 import myCmath
 import time, random
+import numpy as np
+
 random.seed()
 
-NUM=10000
+NUM=1000000+1
 
 # create NUM random integers
 theList = []
@@ -31,3 +33,11 @@ res = sum(theList)
 end = time.time()
 print("python builtin res:", res)
 print("python builtin time:", end - start)
+
+# sum by python built-in sum:
+np_data = np.array(theList)
+start = time.time()
+res = np.sum(np_data)
+end = time.time()
+print("numpy res:", res)
+print("numpy time:", end - start)
