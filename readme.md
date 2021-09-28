@@ -1,4 +1,4 @@
-1. This is a repo contains how I try and test mpich, h5py and python+c.
+1. This is a repo containing how I try and test mpich, h5py and python+c.
 
 
 1. Mpich installation and environment setup is [here](setup.md).
