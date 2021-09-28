@@ -1,11 +1,11 @@
 #include<stdio.h>
 
-int add(int a, int b){
+long add(long a, long b){
     return a + b;
 }
 
-int sum(int a[], size_t len){
-    int res = 0;
+long sum(long a[], size_t len){
+    long res = 0;
     for (size_t i = 0; i < len; ++i){
         res += a[i];
     }
