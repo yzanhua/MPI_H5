@@ -28,3 +28,5 @@ Res: (adding 1000000+1 numbers)
 2. python time: 0.10833501815795898
 3. python builtin time: 0.004462480545043945
 4. numpy time: 0.0005686283111572266
+
+TODO: -O3 seems not working.
