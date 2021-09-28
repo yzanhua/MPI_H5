@@ -11,6 +11,6 @@ Test - ctypes:
 
 Test - pymodules:
 ===
-1. Enter the folder `cpymodule_test`.
+1. Enter the folder `pymodule_test`.
 1. Run `make`.
 
