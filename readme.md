@@ -3,5 +3,7 @@
 
 1. Mpich installation and environment setup is [here](setup.md).
 
-1. The folder `h5test` contains codes for testing h5py.
+1. The folder `h5test`: test h5py.
+
+1. The folder `PythonC`: call c functions from python.
 
