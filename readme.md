@@ -7,3 +7,5 @@
 
 1. The folder `PythonC`: call c functions from python.
 
+1. The folder `mpi_c_cpp`: MPICH with c/c++.
+
