@@ -7,9 +7,7 @@ random.seed()
 NUM=1000000+1
 
 # create NUM random integers
-theList = []
-for i in range(NUM):
-    theList.append(random.randint(0, 1000))
+theList = [i for i in range(NUM)]
 
 # sum by cmath
 start = time.time()
@@ -19,8 +17,8 @@ print("myCmath res:", res)
 print("myCmath time:", end - start)
 
 # sum by python
-start = time.time()
 res = 0
+start = time.time()
 for i in range(NUM):
     res += theList[i]
 end = time.time()
