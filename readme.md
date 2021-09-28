@@ -9,3 +9,5 @@
 
 1. The folder `mpi_c_cpp`: MPICH with c/c++.
 
+1. The folder `mpi_py`: MPICH with python.
+
