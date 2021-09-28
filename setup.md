@@ -1,6 +1,7 @@
 Install MPICH
 ===
-1. Download source code from the [official website](https://www.mpich.org/downloads/). Or equivalently I use: 
+1. Login to `acfs`.
+1. Download source codes from the [official website](https://www.mpich.org/downloads/). Or equivalently I use: 
 
     ```shell
     cd ~
