@@ -1,14 +1,18 @@
 from mpi4py import MPI
+################################
+# # send receive (pickle)
+# comm = MPI.COMM_WORLD
+# rank = comm.Get_rank()
 
-comm = MPI.COMM_WORLD
-rank = comm.Get_rank()
+# if rank == 0:
+#     data = {'a': 7, 'b': 3.14}
+#     comm.send(data, dest=1, tag=11)
+# elif rank == 1:
+#     data = comm.recv(source=0, tag=11)
 
-if rank == 0:
-    data = {'a': 7, 'b': 3.14}
-    comm.send(data, dest=1, tag=11)
-elif rank == 1:
-    data = comm.recv(source=0, tag=11)
 
+################################
+# # non-blocking communication
 # from mpi4py import MPI
 
 # comm = MPI.COMM_WORLD
@@ -23,6 +27,8 @@ elif rank == 1:
 #     data = req.wait()
 
 
+################################
+# # MPI + buffered data (numpy) - fastest
 # from mpi4py import MPI
 # import numpy
 
@@ -46,6 +52,8 @@ elif rank == 1:
 #     comm.Recv(data, source=0, tag=13)
 
 
+################################
+# # bcast
 # from mpi4py import MPI
 
 # comm = MPI.COMM_WORLD
@@ -59,6 +67,8 @@ elif rank == 1:
 # data = comm.bcast(data, root=0)
 
 
+################################
+# # scatter
 # from mpi4py import MPI
 
 # comm = MPI.COMM_WORLD
@@ -73,6 +83,8 @@ elif rank == 1:
 # assert data == (rank+1)**2
 
 
+################################
+# # gather
 # from mpi4py import MPI
 
 # comm = MPI.COMM_WORLD
@@ -88,6 +100,8 @@ elif rank == 1:
 #     assert data is None
 
 
+################################
+# # bcast + numpy
 # from mpi4py import MPI
 # import numpy as np
 
@@ -103,6 +117,8 @@ elif rank == 1:
 #     assert data[i] == i
 
 
+################################
+# # sccater + numpy
 # from mpi4py import MPI
 # import numpy as np
 
@@ -117,8 +133,12 @@ elif rank == 1:
 # recvbuf = np.empty(100, dtype='i')
 # comm.Scatter(sendbuf, recvbuf, root=0)
 # assert np.allclose(recvbuf, rank)
+# print(recvbuf)
+# print(rank)
 
 
+################################
+# # gather + numpy
 # from mpi4py import MPI
 # import numpy as np
 
