@@ -2,7 +2,7 @@ from distutils.core import setup, Extension
 
 math_module = Extension('myCmath',
                         sources=['cmath.c'],
-                        extra_compile_args=['-O3']
+                        extra_compile_args=['-O3']  # this makes no difference
                         )
 
 
