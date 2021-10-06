@@ -12,5 +12,8 @@ CFLAGS=$(INCLUDE_PARAM)
 all:
 	$(CC) $(CFLAGS) main.c -o out
 
+run:
+	./out
+
 clean:
 	rm -rf out *.o *.h5 *.hdf5
