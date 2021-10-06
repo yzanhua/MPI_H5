@@ -68,3 +68,34 @@ Install h5py and mpi4py
    pip install h5py
    pip install mpi4py
    ```
+
+
+Install hdf5 for c
+===
+1. Download hdf5-1.12.1.tar.bz2 to $HOME
+1. Unzip
+    ```shell
+    tar xvjf hdf5-1.12.1.tar.bz2
+    ```
+1. create build directory:
+    ```shell
+    mkdir ~/hdf5-build
+    ```
+1. create install folder:
+    ```
+    mkdir ~/.hdf5
+    ```
+1. configure:
+    ```shell
+    cd ~/hdf5-build
+    CC=~/.mpich/bin/mpicc ../hdf5-1.12.1/configure --prefix=/homes/zhd1108/.hdf5  --enable-parallel
+    ```
+1. make
+    ```shell
+    # cd ~/hdf5-build
+    make
+    ```
+1. ```shell
+    make check
+    make install
+    ```
