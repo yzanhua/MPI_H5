@@ -12,7 +12,8 @@
 static PyObject *read_wrapper(PyObject *self, PyObject *args)
 {
     const char *file_name, *dset_name;
-    if (!PyArg_ParseTuple(args, "ss", &file_name, &dset_name)) {
+    if (!PyArg_ParseTuple(args, "ss", &file_name, &dset_name))
+    {
         PyErr_SetString(PyExc_TypeError, "Parsing two strings fails.");
         return NULL;
     }
@@ -29,12 +30,12 @@ static PyObject *read_wrapper(PyObject *self, PyObject *args)
 
     // get needed size
     hsize_t dsize = H5Sget_simple_extent_npoints(dspace) * H5Tget_size(H5Dget_type(dset));
-    void* buff = malloc(dsize);
+    void *buff = malloc(dsize);
     status = H5Dread(dset, H5Dget_type(dset), H5S_ALL, H5S_ALL, H5P_DEFAULT, buff);
 
     PyArrayObject *result;
     result = (PyArrayObject *)PyArray_SimpleNewFromData(ndims, dims, PyArray_INT32, buff);
-    
+
     status = H5Sclose(dspace);
     status = H5Dclose(dset);
     status = H5Fclose(file);
