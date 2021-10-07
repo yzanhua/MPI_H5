@@ -2,7 +2,6 @@ import os
 from setuptools import setup, Extension, find_packages
 
 os.environ["CC"] = "h5pcc"
-os.environ["LD_LIBRARY_PATH"] = "/homes/zhd1108/.hdf5/lib"
 
 h5_read_c_module = Extension(name='z5.cread',
                         sources=['src/z5/cread.c'],
@@ -10,7 +9,7 @@ h5_read_c_module = Extension(name='z5.cread',
                         include_dirs=["/usr/include/numpy", "/home/zanhua/.hdf5/include"],
                         extra_compile_args=["-DNDEBUG", "-O3"],
                         extra_link_args=["-L/homes/zhd1108/.hdf5/lib", "-l:libhdf5.so"]
-                        
+
                         )
 
 

@@ -1,11 +1,13 @@
-LD_DIR=/homes/zhd1108/.hdf5/lib
+H5_DIR=/homes/zhd1108/.hdf5/lib
 LD_VAR=LD_LIBRARY_PATH
-LD_FALG=$(LD_VAR)=$(LD_DIR)
+LD_FALG=$(LD_VAR)=$(H5_DIR)
+
+SCRIPT=tests/test.py  # the "main" python file to run.
 
 .PHONY: all run install clean
 
 all: tests/test.py
-	$(LD_FALG) python tests/test.py
+	$(LD_FALG) python $(SCRIPT)
 
 install:
 	make clean
