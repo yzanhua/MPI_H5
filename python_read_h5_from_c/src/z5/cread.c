@@ -11,6 +11,10 @@
 // define and implememt method - read_dataset
 static PyObject *read_wrapper(PyObject *self, PyObject *args)
 {
+    // #ifdef TEST_HUANG
+    // int a __attribute__((cleanup (scoped)));
+    // wa = 42;
+    // #endif
     const char *file_name, *dset_name;
     if (!PyArg_ParseTuple(args, "ss", &file_name, &dset_name))
     {
