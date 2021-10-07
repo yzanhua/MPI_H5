@@ -1,4 +1,7 @@
 .vscode
 *.h5
+*.hdf5
 *.o
 *out
+*__pycache__
+*egg-info 
