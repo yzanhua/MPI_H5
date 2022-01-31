@@ -1,5 +1,5 @@
 CC=h5pcc # h5 parallel cc in /home/zanhua/.hdf5/bin
-H5_INCLUDE_DIR=/home/zanhua/.hdf5/include
+H5_INCLUDE_DIR=/homes/zhd1108/HDF5/1.13.0/include
 
 # add more headers here
 HEADERS=$(H5_INCLUDE_DIR)
